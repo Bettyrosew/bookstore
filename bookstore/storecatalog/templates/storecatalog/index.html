@@ -1,0 +1,13 @@
+<h1>Bookstore Booklist 2023</h1>
+{% if book_list %}
+<ul>
+    {% for book in book_list %}
+    <li>
+        <p>{{ book.title}} - {{ book.author}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No books available</p>
+{% endif %}
+<p><br><b>There are currently {{ num_books }} books in our catalog</b></p>
